@@ -1,22 +1,19 @@
-package back.usuarios.barbeiros.service;
+package back.servicos.service;
 
-import back.usuarios.barbeiros.repository.barbeiroRepository;
+import back.servicos.repository.servicoRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class barbeiroService {
+public class servicoService {
 
     @Autowired
     public ModelMapper mapper;
 
     @Autowired
-    public barbeiroRepository repository;
+    public servicoRepository repository;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> back
 }
