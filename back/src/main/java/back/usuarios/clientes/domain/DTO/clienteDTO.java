@@ -12,6 +12,8 @@ public class clienteDTO {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
+    private Long idCliente;
     private String nome;
+    private String telefone;
+    private String email;
 }
