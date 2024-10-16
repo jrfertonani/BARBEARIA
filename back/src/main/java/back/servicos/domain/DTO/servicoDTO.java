@@ -6,12 +6,15 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.io.Serial;
+import java.math.BigDecimal;
 
 @Data
 public class servicoDTO {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private Integer id;
-    private String nome;
+    private Long idServico;
+    private String nomeServico;
+    private BigDecimal preco;
+    private String descricao;
 }

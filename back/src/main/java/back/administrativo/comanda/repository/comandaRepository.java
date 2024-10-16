@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface comandaRepository extends JpaRepository<Comanda, Long> {
+    // Buscar comanda por agendamento
+   // Comanda findByAgendamentoId(Long idAgendamento);
+
+
 }
