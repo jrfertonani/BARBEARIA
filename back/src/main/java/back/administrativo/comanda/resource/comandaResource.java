@@ -48,4 +48,11 @@ public class comandaResource {
         );
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Comanda> findById(@PathVariable Long id){
+        return ResponseEntity.ok().body(
+                mapper.map(service.findById(id), Comanda.class)
+        );
+    }
+
 }
