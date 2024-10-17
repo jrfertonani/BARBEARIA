@@ -1,5 +1,9 @@
 package back.administrativo.agenda.service;
 
+import back._config.Exeptions.serviceExceptions.ObjectNotFoundException;
+import back.administrativo.agenda.domain.DTO.agendaDTO;
+import back.administrativo.comanda.domain.DTO.comandaDTO;
+import back.administrativo.comanda.domain.entity.Comanda;
 import back.servicos.repository.servicoRepository;
 import back.usuarios.barbeiros.repository.barbeiroRepository;
 import back.usuarios.clientes.repository.clienteRepository;
@@ -22,6 +26,34 @@ public class agendaService {
 
     @Autowired
     private agendaRepository agendaRepository;
+
+
+    public List<Agenda> findAll() {
+        return agendaRepository.findAll();
+    }
+
+    public agendaDTO findById(Long id) {
+        return mapper.map(
+                agendaRepository.findById(id).orElseThrow(
+                        () -> new ObjectNotFoundException("Agendamento não encontrado! ID: " +id)
+                ), agendaDTO.class);
+    }
+
+    public Agenda update(Long id, agendaDTO DTO) {
+        findById(id);
+        return agendaRepository.save(
+                mapper.map(DTO, Agenda.class)
+        );
+    }
+
+
+    public void delete(Long id) {
+        findById(id);
+        agendaRepository.deleteById(id);
+    }
+
+
+
 /*
     @Autowired
     private clienteRepository clienteRepository;
