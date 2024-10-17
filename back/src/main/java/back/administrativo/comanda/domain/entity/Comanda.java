@@ -1,6 +1,7 @@
 package back.administrativo.comanda.domain.entity;
 
 import back.administrativo.agenda.domain.entity.Agenda;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,6 +24,7 @@ public class Comanda implements Serializable {
     private String formaPagamento; // Pode ser ENUM
 
     // Relacionamento com Agenda (Cada comanda pertence a um único agendamento)
+   @JsonIgnore
     @OneToOne
     @JoinColumn(name = "id_agendamento")
     private Agenda agendamento;
