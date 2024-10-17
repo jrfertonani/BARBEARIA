@@ -60,4 +60,10 @@ public class servicoResource {
         return ResponseEntity.ok().body(DTO);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
