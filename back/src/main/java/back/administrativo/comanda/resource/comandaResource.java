@@ -55,4 +55,11 @@ public class comandaResource {
         );
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<comandaDTO> updata(@PathVariable Long id,
+                                             @RequestBody comandaDTO DTO) {
+        Comanda obj = service.update(id,DTO);
+        return ResponseEntity.ok().body(DTO);
+    }
+
 }
