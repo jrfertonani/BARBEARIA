@@ -45,4 +45,9 @@ public class servicoService {
                 mapper.map(DTO, Servicos.class)
         );
     }
+
+    public void delete(Long id) {
+        findById(id);
+        repository.deleteById(id);
+    }
 }
