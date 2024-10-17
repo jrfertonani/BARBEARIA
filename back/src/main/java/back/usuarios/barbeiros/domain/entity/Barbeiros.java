@@ -1,6 +1,7 @@
 package back.usuarios.barbeiros.domain.entity;
 
 import back.administrativo.agenda.domain.entity.Agenda;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -21,6 +22,7 @@ public class Barbeiros implements Serializable {
     private String especialidade;
     private String telefone;
 
+    @JsonIgnore
     // Relacionamento com Agenda (1 Barbeiro pode realizar vários agendamentos)
     @OneToMany(mappedBy = "barbeiro")
     private List<Agenda> agendamentos;
