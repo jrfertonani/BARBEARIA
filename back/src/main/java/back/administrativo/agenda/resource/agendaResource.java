@@ -1,16 +1,15 @@
 package back.administrativo.agenda.resource;
 
 
+import back.administrativo.agenda.domain.DTO.agendaDTO;
 import back.administrativo.agenda.domain.entity.Agenda;
 import back.administrativo.agenda.service.agendaService;
+import back.administrativo.comanda.domain.DTO.comandaDTO;
 import back.administrativo.comanda.domain.entity.Comanda;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,5 +36,18 @@ public class agendaResource {
         );
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Agenda> findById(@PathVariable Long id){
+        return ResponseEntity.ok().body(
+                mapper.map(service.findById(id), Agenda.class)
+        );
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<agendaDTO> updata(@PathVariable Long id,
+                                            @RequestBody agendaDTO DTO) {
+        Agenda obj = service.update(id,DTO);
+        return ResponseEntity.ok().body(DTO);
+    }
 
 }
