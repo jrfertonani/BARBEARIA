@@ -38,5 +38,11 @@ public class clienteService {
                 ), clienteDTO.class);
     }
 
+    public Clientes update(Long id, clienteDTO DTO) {
+        findById(id);
+        return repository.save(
+                mapper.map(DTO, Clientes.class)
+        );
+    }
 
 }
