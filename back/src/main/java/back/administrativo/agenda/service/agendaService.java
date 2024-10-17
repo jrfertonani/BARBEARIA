@@ -47,6 +47,12 @@ public class agendaService {
     }
 
 
+    public void delete(Long id) {
+        findById(id);
+        agendaRepository.deleteById(id);
+    }
+
+
 
 /*
     @Autowired
