@@ -53,5 +53,11 @@ public class servicoResource {
         );
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<servicoDTO> updata(@PathVariable Long id,
+                                             @RequestBody servicoDTO DTO) {
+        Servicos obj = service.update(id,DTO);
+        return ResponseEntity.ok().body(DTO);
+    }
 
 }
