@@ -1,5 +1,6 @@
 package back.administrativo.comanda.service;
 
+import back._config.Exeptions.serviceExceptions.ObjectNotFoundException;
 import back.administrativo.comanda.domain.DTO.comandaDTO;
 import back.administrativo.comanda.domain.entity.Comanda;
 import back.administrativo.comanda.repository.comandaRepository;
@@ -28,6 +29,13 @@ public class comandaService {
 
     public List<Comanda> findAll() {
         return repository.findAll();
+    }
+
+    public comandaDTO findById(Long id) {
+        return mapper.map(
+                repository.findById(id).orElseThrow(
+                        () -> new ObjectNotFoundException("Comanda não encontrado! ID: " +id)
+                ), comandaDTO.class);
     }
 
 
