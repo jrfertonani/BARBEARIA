@@ -1,6 +1,7 @@
 package back.servicos.domain.entity;
 
 import back.administrativo.agenda.domain.entity.Agenda;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,6 +24,7 @@ public class Servicos implements Serializable {
     private String descricao;
 
     // Relacionamento com Agenda (1 Serviço pode estar em vários agendamentos)
+    @JsonIgnore
     @OneToMany(mappedBy = "servico")
     private List<Agenda> agendamentos;
 }

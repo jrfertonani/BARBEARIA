@@ -4,6 +4,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.Setter;
 
 import java.io.Serial;
 import java.math.BigDecimal;
@@ -17,4 +18,6 @@ public class servicoDTO {
     private String nomeServico;
     private BigDecimal preco;
     private String descricao;
+
+
 }

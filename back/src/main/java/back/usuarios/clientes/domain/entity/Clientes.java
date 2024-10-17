@@ -1,6 +1,7 @@
 package back.usuarios.clientes.domain.entity;
 
 import back.administrativo.agenda.domain.entity.Agenda;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,6 +23,7 @@ public class Clientes implements Serializable {
     private String email;
 
     // Relacionamento com Agenda (1 Cliente pode ter vários agendamentos)
+    @JsonIgnore
     @OneToMany(mappedBy = "cliente")
     private List<Agenda> agendamentos;
 
