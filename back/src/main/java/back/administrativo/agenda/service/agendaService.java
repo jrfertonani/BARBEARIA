@@ -1,5 +1,6 @@
 package back.administrativo.agenda.service;
 
+import back.administrativo.comanda.domain.entity.Comanda;
 import back.servicos.repository.servicoRepository;
 import back.usuarios.barbeiros.repository.barbeiroRepository;
 import back.usuarios.clientes.repository.clienteRepository;
@@ -22,6 +23,14 @@ public class agendaService {
 
     @Autowired
     private agendaRepository agendaRepository;
+
+
+    public List<Agenda> findAll() {
+        return agendaRepository.findAll();
+    }
+
+
+
 /*
     @Autowired
     private clienteRepository clienteRepository;
