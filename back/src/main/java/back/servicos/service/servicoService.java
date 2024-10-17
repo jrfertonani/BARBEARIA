@@ -38,4 +38,11 @@ public class servicoService {
                         () -> new ObjectNotFoundException("Serviço não encontrado! ID: " +id)
                 ), servicoDTO.class);
     }
+
+    public Servicos update(Long id, servicoDTO DTO) {
+        findById(id);
+        return repository.save(
+                mapper.map(DTO, Servicos.class)
+        );
+    }
 }
