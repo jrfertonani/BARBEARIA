@@ -56,4 +56,11 @@ public class clienteResource {
         );
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<clienteDTO> updata(@PathVariable Long id,
+                                              @RequestBody clienteDTO DTO) {
+        Clientes obj = service.update(id,DTO);
+        return ResponseEntity.ok().body(DTO);
+    }
+
 }
