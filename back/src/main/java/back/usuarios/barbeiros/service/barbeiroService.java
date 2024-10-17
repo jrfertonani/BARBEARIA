@@ -25,12 +25,7 @@ public class barbeiroService {
         );
     }
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> back
-=======
     public List<Barbeiros> findAll() {
         return repository.findAll();
     }
@@ -54,5 +49,4 @@ public class barbeiroService {
         repository.deleteById(id);
     }
 
->>>>>>> back
 }
