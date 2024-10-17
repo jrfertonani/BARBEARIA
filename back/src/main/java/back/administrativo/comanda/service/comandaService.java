@@ -38,5 +38,12 @@ public class comandaService {
                 ), comandaDTO.class);
     }
 
+    public Comanda update(Long id, comandaDTO DTO) {
+        findById(id);
+        return repository.save(
+                mapper.map(DTO, Comanda.class)
+        );
+    }
+
 
 }
