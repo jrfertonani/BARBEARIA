@@ -27,3 +27,4 @@ export class AgendaListComponent implements OnInit{
   }
 
 }
+
