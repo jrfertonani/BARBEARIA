@@ -41,6 +41,4 @@ export const routes: Routes = [
   {path:'editarServico/:id', component: ServicoEditComponent},
 
 
-
-
 ];
