@@ -7,6 +7,9 @@ import { ClienteEditComponent } from './components/usuarios/clientes/cliente-edi
 import { BarbeiroListComponent } from './components/usuarios/barbeiros/barbeiro-list/barbeiro-list.component';
 import { BarbeiroCreateComponent } from './components/usuarios/barbeiros/barbeiro-create/barbeiro-create.component';
 import { BarbeiroEditComponent } from './components/usuarios/barbeiros/barbeiro-edit/barbeiro-edit.component';
+import { AgendaListComponent } from './components/administrativo/agenda/agenda-list/agenda-list.component';
+import { AgendaCreateComponent } from './components/administrativo/agenda/agenda-create/agenda-create.component';
+import { AgendaEditComponent } from './components/administrativo/agenda/agenda-edit/agenda-edit.component';
 
 export const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -19,6 +22,9 @@ export const routes: Routes = [
   {path:'cadastroBarbeiro', component: BarbeiroCreateComponent},
   {path:'editarBarbeiro/:id', component: BarbeiroEditComponent},
 
+  {path:'agenda', component: AgendaListComponent},
+  {path:'cadastroAgenda', component: AgendaCreateComponent},
+  {path:'editarAgenda/:id', component: AgendaEditComponent},
 
 
 ];
