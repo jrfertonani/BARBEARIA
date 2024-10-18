@@ -10,6 +10,9 @@ import { BarbeiroEditComponent } from './components/usuarios/barbeiros/barbeiro-
 import { AgendaListComponent } from './components/administrativo/agenda/agenda-list/agenda-list.component';
 import { AgendaCreateComponent } from './components/administrativo/agenda/agenda-create/agenda-create.component';
 import { AgendaEditComponent } from './components/administrativo/agenda/agenda-edit/agenda-edit.component';
+import { ComandaListComponent } from './components/administrativo/comanda/comanda-list/comanda-list.component';
+import { ComandaCreateComponent } from './components/administrativo/comanda/comanda-create/comanda-create.component';
+import { ComandaEditComponent } from './components/administrativo/comanda/comanda-edit/comanda-edit.component';
 
 export const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -26,5 +29,8 @@ export const routes: Routes = [
   {path:'cadastroAgenda', component: AgendaCreateComponent},
   {path:'editarAgenda/:id', component: AgendaEditComponent},
 
+  {path:'comandas', component: ComandaListComponent},
+  {path:'cadastroComandas', component: ComandaCreateComponent},
+  {path:'editarComandas/:id', component: ComandaEditComponent},
 
 ];
