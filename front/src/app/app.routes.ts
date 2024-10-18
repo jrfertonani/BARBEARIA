@@ -13,6 +13,9 @@ import { AgendaEditComponent } from './components/administrativo/agenda/agenda-e
 import { ComandaListComponent } from './components/administrativo/comanda/comanda-list/comanda-list.component';
 import { ComandaCreateComponent } from './components/administrativo/comanda/comanda-create/comanda-create.component';
 import { ComandaEditComponent } from './components/administrativo/comanda/comanda-edit/comanda-edit.component';
+import { ServicoListComponent } from './components/servicos/servico-list/servico-list.component';
+import { ServicoEditComponent } from './components/servicos/servico-edit/servico-edit.component';
+import { ServicoCreatComponent } from './components/servicos/servico-creat/servico-creat.component';
 
 export const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -32,6 +35,11 @@ export const routes: Routes = [
   {path:'comandas', component: ComandaListComponent},
   {path:'cadastroComandas', component: ComandaCreateComponent},
   {path:'editarComandas/:id', component: ComandaEditComponent},
+
+  {path:'servicos', component: ServicoListComponent},
+  {path:'cadastroServico', component: ServicoCreatComponent},
+  {path:'editarServico/:id', component: ServicoEditComponent},
+
 
 
 ];
