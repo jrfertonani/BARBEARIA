@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class ServicosService {
 
-  constructor() { }
+
+  URL = 'http://localhost:8080/servicos';
+
+  constructor(private http: HttpClient) {}
 }
