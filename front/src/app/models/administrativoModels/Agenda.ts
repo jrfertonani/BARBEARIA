@@ -6,3 +6,4 @@ export interface Agenda {
   servicoId: number;
   comandaId?: number;
 }
+
