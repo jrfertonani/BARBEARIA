@@ -3,5 +3,5 @@ export interface Comanda {
   valorTotal: number;
   dataPagamento: Date;
   formaPagamento: string;
-  agendamentoId?: number;
+  agendamentoId: number;
 }

@@ -11,7 +11,7 @@ import { ComandasService } from '../../../../services/administrativo/comandas/co
 })
 export class ComandaListComponent implements OnInit{
 
-  comanda: Comanda[] = [];
+  comandas: Comanda[] = [];
   comandaGeral: Comanda [] = [];
 
   constructor(private serviceComandas: ComandasService){}
@@ -20,10 +20,10 @@ export class ComandaListComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.serviceComandas.List().subscribe((comanda) => {
-      this.comanda = comanda;
-      this.comandaGeral = comanda;
-      console.log(comanda);
+    this.serviceComandas.List().subscribe((comandas) => {
+      this.comandas = comandas;
+      this.comandaGeral = comandas;
+      console.log(comandas);
     })
   }
 

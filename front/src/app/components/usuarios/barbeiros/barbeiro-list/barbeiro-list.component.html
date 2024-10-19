@@ -1,1 +1,45 @@
-<p>barbeiro-list works!</p>
+<div class="container mt-5">
+  <button class="btn btn-success w-100"> Cadastrar novo barbeiro</button>
+  <div>
+    <label class="form-label">Pesquisar:</label>
+    <input class="form-control" type="text" placeholder="Qual barbeiro deseja buscar?"/>
+  </div>
+
+<table class="table table-hoven table-borbered mt-5">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>nome</th>
+      <th>telefone</th>
+      <th>email</th>
+      <th></th>
+    </tr>
+  </thead>
+
+
+<tbody>
+  @if (barbeiros.length > 0) {
+    @for (barbeiro of barbeiros; track $index) {
+
+      <tr>
+        <td>{{ barbeiro.idBarbeiro }}</td>
+        <td>{{ barbeiro.nome }}</td>
+        <td>{{ barbeiro.telefone }}</td>
+        <td>{{ barbeiro.especialidade }}</td>
+        <td>
+          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-danger mx-2"> Excluir</button>
+        </td>
+      </tr>
+
+
+    }
+  }@else {
+    <tr class="text-center">
+      <td colspan="7">Nenhum barbeiro cadastrado!</td>
+    </tr>
+  }
+</tbody>
+</table>
+
+</div>

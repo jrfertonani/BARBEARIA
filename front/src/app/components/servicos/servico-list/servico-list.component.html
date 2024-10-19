@@ -1,1 +1,45 @@
-<p>servico-list works!</p>
+<div class="container mt-5">
+  <button class="btn btn-success w-100"> Cadastrar novo servico</button>
+  <div>
+    <label class="form-label">Pesquisar:</label>
+    <input class="form-control" type="text" placeholder="Qual servico deseja buscar?"/>
+  </div>
+
+<table class="table table-hoven table-borbered mt-5">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>nome</th>
+      <th>preco</th>
+      <th>descricao</th>
+      <th></th>
+    </tr>
+  </thead>
+
+
+<tbody>
+  @if (servicos.length > 0) {
+    @for (servico of servicos; track $index) {
+
+      <tr>
+        <td>{{ servico.idServico }}</td>
+        <td>{{ servico.nomeServico }}</td>
+        <td>{{ servico.preco }}</td>
+        <td>{{ servico.descricao }}</td>
+        <td>
+          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-danger mx-2"> Excluir</button>
+        </td>
+      </tr>
+
+
+    }
+  }@else {
+    <tr class="text-center">
+      <td colspan="7">Nenhum servico cadastrado!</td>
+    </tr>
+  }
+</tbody>
+</table>
+
+</div>

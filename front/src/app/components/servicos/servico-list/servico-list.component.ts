@@ -11,17 +11,17 @@ import { Servicos } from '../../../models/servicos/Servicos';
 })
 export class ServicoListComponent implements OnInit{
 
-  servico: Servicos[] = [];
+  servicos: Servicos[] = [];
   servicoGeral: Servicos[] = [];
 
 constructor(private serviceServico: ServicosService) {}
 
 
 ngOnInit(): void {
-   this.serviceServico.List().subscribe((servico) =>{
-    this.servico = servico;
-    this.servicoGeral = servico;
-    console.log(servico);
+   this.serviceServico.List().subscribe((servicos) =>{
+    this.servicos = servicos;
+    this.servicoGeral = servicos;
+    console.log(servicos);
    })
 
 }
