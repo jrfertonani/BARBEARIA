@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Agenda } from '../../../../models/administrativoModels/Agenda';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AgendaService } from '../../../../services/administrativo/agenda/agenda.service';
 
 @Component({
