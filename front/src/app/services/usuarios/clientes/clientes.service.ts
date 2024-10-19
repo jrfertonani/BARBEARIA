@@ -17,5 +17,9 @@ export class ClientesService {
     return this.http.get<Clientes[]>(this.URL);
   }
 
+  findById(id:number): Observable<Clientes>{
+    //const url = `${this.URL}/${marca.id}`;
+    return this.http.get<Clientes>(`${this.URL}/${id}`)
+  }
 
 }
