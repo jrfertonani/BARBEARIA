@@ -1,1 +1,48 @@
-<p>agenda-list works!</p>
+<div class="container mt-5">
+  <button class="btn btn-success w-100"> Agendar</button>
+  <div>
+    <label class="form-label">Pesquisar:</label>
+    <input class="form-control" type="text" placeholder="Qual agendamento deseja buscar?"/>
+  </div>
+
+<table class="table table-hoven table-borbered mt-5">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>Data Hora</th>
+      <th>Cliente</th>
+      <th>Barbeiro</th>
+      <th>Servico</th>
+      <th>comanda</th>
+      <th></th>
+    </tr>
+  </thead>
+
+<tbody>
+  @if (agenda.length > 0) {
+    @for (agendamento of agenda; track $index) {
+
+      <tr>
+        <td>{{ agendamento.idAgendamento }}</td>
+        <td>{{ agendamento.dataHora }}</td>
+        <td>{{ agendamento.clienteId }}</td>
+        <td>{{ agendamento.barbeiroId }}</td>
+        <td>{{ agendamento.servicoId }}</td>
+        <td>{{ agendamento.comandaId }}</td>
+        <td>
+          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-danger mx-2"> Excluir</button>
+        </td>
+      </tr>
+
+
+    }
+  }@else {
+    <tr class="text-center">
+      <td colspan="7">Nenhum agendamento cadastrado!</td>
+    </tr>
+  }
+</tbody>
+</table>
+
+</div>

@@ -14,6 +14,7 @@ export class AgendaListComponent implements OnInit{
   agenda: Agenda [] = [];
   agendaGeral: Agenda[] = [];
 
+
   constructor(private serviceAgenda: AgendaService){}
 
 

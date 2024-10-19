@@ -4,6 +4,6 @@ export interface Agenda {
   clienteId: number;
   barbeiroId: number;
   servicoId: number;
-  comandaId?: number;
+  comandaId: number;
 }
 
