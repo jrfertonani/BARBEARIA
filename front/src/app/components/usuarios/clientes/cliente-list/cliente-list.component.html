@@ -1,1 +1,47 @@
-<p>cliente-list works!</p>
+<div class="container mt-5">
+  <button class="btn btn-success w-100"> Cadastrar novo cliente</button>
+  <div>
+    <label class="form-label">Pesquisar:</label>
+    <input class="form-control" type="text" placeholder="Qual cliente deseja buscar?"/>
+  </div>
+
+<table class="table table-hoven table-borbered mt-5">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>nome</th>
+      <th>telefone</th>
+      <th>email</th>
+      <th></th>
+    </tr>
+  </thead>
+
+
+<tbody>
+  @if (clientes.length > 0) {
+    @for (cliente of clientes; track $index) {
+
+      <tr>
+        <td>{{ cliente.idCliente }}</td>
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.telefone }}</td>
+        <td>{{ cliente.email }}</td>
+        <td>
+          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-danger mx-2"> Excluir</button>
+        </td>
+      </tr>
+
+
+    }
+  }@else {
+    <tr class="text-center">
+      <td colspan="7">Nenhum usuario cadastrado!</td>
+    </tr>
+  }
+</tbody>
+</table>
+
+</div>
+
+
