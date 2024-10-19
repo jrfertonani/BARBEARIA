@@ -12,17 +12,17 @@ import { Barbeiros } from '../../../../models/usuarios/Barbeiros';
 export class BarbeiroListComponent implements OnInit{
 
 
-  barbeiro: Barbeiros [] = [];
+  barbeiros: Barbeiros [] = [];
   barbeiroGeral: Barbeiros[] = [];
 
   constructor(private serviceBarbeiro: BarbeirosService) {}
 
 
   ngOnInit(): void {
-      this.serviceBarbeiro.List().subscribe((barbeiro) => {
-        this.barbeiro = barbeiro;
-        this.barbeiroGeral = barbeiro;
-        console.log(barbeiro);
+      this.serviceBarbeiro.List().subscribe((barbeiros) => {
+        this.barbeiros = barbeiros;
+        this.barbeiroGeral = barbeiros;
+        console.log(barbeiros);
       })
 
   }
