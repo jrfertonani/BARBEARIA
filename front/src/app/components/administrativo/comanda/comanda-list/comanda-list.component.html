@@ -1,1 +1,47 @@
-<p>comanda-list works!</p>
+<div class="container mt-5">
+  <button class="btn btn-success w-100"> Cadastrar nova comanda</button>
+  <div>
+    <label class="form-label">Pesquisar:</label>
+    <input class="form-control" type="text" placeholder="Qual comanda deseja buscar?"/>
+  </div>
+
+<table class="table table-hoven table-borbered mt-5">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>Agendamento</th>
+      <th>Data pagamento</th>
+      <th>Forma pagamento</th>
+      <th>Valor total</th>
+      <th></th>
+    </tr>
+  </thead>
+
+
+<tbody>
+  @if (comandas.length > 0) {
+    @for (comanda of comandas; track $index) {
+
+      <tr>
+        <td>{{ comanda.idComanda }}</td>
+        <td>{{ comanda.agendamentoId }}</td>
+        <td>{{ comanda.dataPagamento }}</td>
+        <td>{{ comanda.formaPagamento }}</td>
+        <td>{{ comanda.valorTotal }}</td>
+        <td>
+          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-danger mx-2"> Excluir</button>
+        </td>
+      </tr>
+
+
+    }
+  }@else {
+    <tr class="text-center">
+      <td colspan="7">Nenhuma comanda cadastrada!</td>
+    </tr>
+  }
+</tbody>
+</table>
+
+</div>
