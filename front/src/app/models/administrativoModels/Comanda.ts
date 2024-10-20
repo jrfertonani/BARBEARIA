@@ -7,3 +7,5 @@ export interface Comanda {
   formaPagamento: string;
   idAgendamento: number;
 }
+
+
