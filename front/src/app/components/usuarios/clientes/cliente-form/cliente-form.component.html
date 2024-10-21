@@ -1,1 +1,21 @@
-<p>cliente-form works!</p>
+<div class="container mt-5">
+  <h1> FORM </h1>
+  <form [formGroup]="clienteForm" #formDir="ngForm">
+
+    <div class="mt-03">
+      <label class="fom-label">Nome</label>
+      <input type="text" placeholder="Insira o Nome!" class="form-control" formControlName="nome" />
+    </div>
+
+    <div class="mt-03">
+      <label class="fom-label">Telefone</label>
+      <input type="number" placeholder="Insira o Telefone!" class="form-control" formControlName="telefone" />
+    </div>
+
+    <div class="mt-03">
+      <label class="fom-label">Email</label>
+      <input type="Email" placeholder="Insira o Email!" class="form-control" formControlName="email" />
+    </div>
+
+  </form>
+</div>
