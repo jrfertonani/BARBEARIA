@@ -17,5 +17,7 @@ export class AgendaService {
     return this.http.get<Agenda[]>(this.URL);
   }
 
-
+  createAgenda(agenda: Agenda):Observable<Agenda>{
+    return this.http.post<Agenda>(this.URL,agenda);
+  }
 }
