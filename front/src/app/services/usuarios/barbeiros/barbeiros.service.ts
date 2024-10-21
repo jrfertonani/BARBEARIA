@@ -18,4 +18,8 @@ export class BarbeirosService {
     return this.http.get<Barbeiros[]>(this.URL);
   }
 
+  crearBarbeiro(barbeiro: Barbeiros):Observable<Barbeiros>{
+    return this.http.post<Barbeiros>(this.URL,barbeiro);
+  }
+
 }
