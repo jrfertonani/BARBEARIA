@@ -16,5 +16,4 @@ public class agendaDTO {
     private Long idServico;
     private LocalDateTime dataHora;
 
-
 }

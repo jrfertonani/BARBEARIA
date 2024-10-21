@@ -27,4 +27,6 @@ public class Clientes implements Serializable {
     @OneToMany(mappedBy = "cliente")
     private List<Agenda> agendamentos;
 
+
+
 }

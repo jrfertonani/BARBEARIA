@@ -1,6 +1,7 @@
 package back.administrativo.comanda.domain.entity;
 
 import back.administrativo.agenda.domain.entity.Agenda;
+import back.usuarios.clientes.domain.entity.Clientes;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,5 +1,6 @@
 package back.administrativo.comanda.domain.DTO;
 
+import back.administrativo.agenda.domain.entity.Agenda;
 import lombok.Data;
 
 import java.io.Serial;
@@ -12,10 +13,8 @@ public class comandaDTO {
     private static final long serialVersionUID = 1L;
 
     private Long idComanda;
-    private Long idAgendamento;
     private BigDecimal valorTotal;
     private LocalDate dataPagamento;
     private String formaPagamento;
-
 
 }

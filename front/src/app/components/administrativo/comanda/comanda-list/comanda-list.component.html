@@ -9,10 +9,10 @@
   <thead class="table-dark">
     <tr>
       <th>id</th>
-      <th>Agendamento</th>
+      <th>Valor total</th>
       <th>Data pagamento</th>
       <th>Forma pagamento</th>
-      <th>Valor total</th>
+      <th>Agendamento</th>
       <th></th>
     </tr>
   </thead>
@@ -24,10 +24,11 @@
 
       <tr>
         <td>{{ comanda.idComanda }}</td>
-        <td>{{ comanda.agendamentoId }}</td>
+        <td>{{ comanda.valorTotal }}</td>
         <td>{{ comanda.dataPagamento }}</td>
         <td>{{ comanda.formaPagamento }}</td>
-        <td>{{ comanda.valorTotal }}</td>
+        <td>{{ comanda.agenda}}</td>
+
         <td>
           <button class="btn btn-warning mx-2"> Editar</button>
           <button class="btn btn-danger mx-2"> Excluir</button>
