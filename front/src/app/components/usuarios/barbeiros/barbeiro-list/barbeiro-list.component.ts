@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { BarbeirosService } from '../../../../services/usuarios/barbeiros/barbeiros.service';
 import { Barbeiros } from '../../../../models/usuarios/Barbeiros';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-barbeiro-list',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './barbeiro-list.component.html',
   styleUrl: './barbeiro-list.component.css'
 })
@@ -25,6 +26,18 @@ export class BarbeiroListComponent implements OnInit{
         console.log(barbeiros);
       })
 
+  }
+
+  search(event: Event){
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLocaleLowerCase();
+
+    this.barbeiros = this.barbeiroGeral.filter(barbeiros => {
+      return barbeiros.nome.toLocaleLowerCase().includes(value);
+    })
+
+    //console.log("TARGET", target);
+    //console.log("VALUE", value);
   }
 
 }
