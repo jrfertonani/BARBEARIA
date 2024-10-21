@@ -17,4 +17,8 @@ export class ServicosService {
   List():Observable<Servicos[]>{
     return this.http.get<Servicos[]>(this.URL);
   }
+
+  createSErvico(servico: Servicos):Observable<Servicos>{
+    return this.http.post<Servicos>(this.URL,servico);
+  }
 }
