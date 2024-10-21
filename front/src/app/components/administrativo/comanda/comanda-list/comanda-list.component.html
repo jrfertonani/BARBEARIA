@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <button class="btn btn-success w-100"> Cadastrar nova comanda</button>
+  <button class="btn btn-success w-100" [routerLink]="['/cadastroComandas']"> Cadastrar nova comanda</button>
   <div>
     <label class="form-label">Pesquisar:</label>
     <input class="form-control" type="text" placeholder="Qual comanda deseja buscar?" (input)="search($event)"/>
