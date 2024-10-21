@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <button class="btn btn-success w-100"> Cadastrar novo barbeiro</button>
+  <button class="btn btn-success w-100" [routerLink]="['/cadastroBarbeiro']"> Cadastrar novo barbeiro</button>
   <div>
     <label class="form-label">Pesquisar:</label>
     <input class="form-control" type="text" placeholder="Qual barbeiro deseja buscar?" (input)="search($event)"/>
