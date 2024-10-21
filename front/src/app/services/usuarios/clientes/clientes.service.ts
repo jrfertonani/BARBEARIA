@@ -20,6 +20,10 @@ export class ClientesService {
   findById(id:number): Observable<Clientes>{
     //const url = `${this.URL}/${marca.id}`;
     return this.http.get<Clientes>(`${this.URL}/${id}`)
-  }
+  };
+
+  createCliente(cliente : Clientes):Observable<Clientes>{
+    return this.http.post<Clientes>(this.URL, cliente)
+  };
 
 }
