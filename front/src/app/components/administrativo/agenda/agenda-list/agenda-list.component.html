@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <button class="btn btn-success w-100"> Agendar</button>
+  <button class="btn btn-success w-100" [routerLink]="['/cadastroAgenda']"> Agendar</button>
   <div>
     <label class="form-label">Pesquisar:</label>
     <input class="form-control" type="text" placeholder="Qual agendamento deseja buscar?" (input)="search($event)"/>
