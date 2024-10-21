@@ -26,4 +26,17 @@ ngOnInit(): void {
 
 }
 
+
+search(event: Event){
+  const target = event.target as HTMLInputElement;
+  const value = target.value.toLocaleLowerCase();
+
+  this.servicos = this.servicoGeral.filter(servicos => {
+    return servicos.nomeServico.toLocaleLowerCase().includes(value);
+  })
+
+  //console.log("TARGET", target);
+    //console.log("VALUE", value);
+}
+
 }
