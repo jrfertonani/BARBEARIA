@@ -1,3 +1,4 @@
+import { Clientes } from "../usuarios/Clientes";
 import { Agenda } from "./Agenda";
 
 export interface Comanda {
@@ -5,7 +6,7 @@ export interface Comanda {
   valorTotal: number;
   dataPagamento: Date;
   formaPagamento: string;
-  idAgendamento: number;
+  agenda: Agenda;
 }
 
 

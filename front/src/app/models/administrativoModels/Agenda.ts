@@ -9,6 +9,6 @@ export interface Agenda {
   cliente: Clientes;
   barbeiro: Barbeiros;
   servico: Servicos;
-  comanda?: Comanda;
+  comanda: Comanda;
 }
 
