@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicosService } from '../../../services/servicos/servicos.service';
 import { Servicos } from '../../../models/servicos/Servicos';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-servico-list',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './servico-list.component.html',
   styleUrl: './servico-list.component.css'
 })
