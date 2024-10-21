@@ -2,7 +2,7 @@
   <button class="btn btn-success w-100" [routerLink]="['/cadastroCliente']"> Cadastrar novo cliente</button>
   <div>
     <label class="form-label">Pesquisar:</label>
-    <input class="form-control" type="text" placeholder="Qual cliente deseja buscar?"/>
+    <input class="form-control" type="text" placeholder="Qual cliente deseja buscar?" (input)="search($event)"/>
   </div>
 
 <table class="table table-hoven table-borbered mt-5">

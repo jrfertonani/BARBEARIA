@@ -28,5 +28,17 @@ export class ClienteListComponent implements OnInit{
 
   }
 
+  search(event:Event){
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+
+    this.clientes = this.clientesGeral.filter(clientes => {
+      return clientes.nome.toLocaleLowerCase().includes(value);
+    })
+
+    //console.log("TARGET", target);
+    //console.log("VALUE", value);
+  }
+
 
 }
