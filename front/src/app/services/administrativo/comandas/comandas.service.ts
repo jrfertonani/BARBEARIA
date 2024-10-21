@@ -16,4 +16,8 @@ export class ComandasService {
     return this.http.get<Comanda[]>(this.URL);
   }
 
+  createComandas(comanda : Comanda):Observable<Comanda>{
+    return this.http.post<Comanda>(this.URL,comanda);
+  }
+
 }
