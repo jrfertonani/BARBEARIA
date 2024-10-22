@@ -13,6 +13,9 @@ import { Barbeiros } from '../../../../models/usuarios/Barbeiros';
 })
 export class BarbeiroCreateComponent {
 
+  btnAcao = "Cadastrar"
+  descTitulo = "Cadastrar Barbeiro"
+
   constructor(private serviceBarbeiro: BarbeirosService, private router: Router){}
 
   criateBrbeiro(barbeiro: Barbeiros){
