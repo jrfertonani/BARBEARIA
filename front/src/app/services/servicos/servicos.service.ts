@@ -21,4 +21,8 @@ export class ServicosService {
   createSErvico(servico: Servicos):Observable<Servicos>{
     return this.http.post<Servicos>(this.URL,servico);
   }
+
+  delete(id: number):Observable<Servicos>{
+    return this.http.delete<Servicos>(`${this.URL}/${id}`);
+  }
 }
