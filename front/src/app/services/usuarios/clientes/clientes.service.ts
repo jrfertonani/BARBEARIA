@@ -28,7 +28,8 @@ export class ClientesService {
 
 
   editCliente(cliente: Clientes):Observable<Clientes>{
-    return this.http.put<Clientes>(this.URL,cliente);
+    const url = `${this.URL}/${cliente.idCliente}`
+    return this.http.put<Clientes>(url,cliente);
   }
 
   delete(id: number):Observable<Clientes>{
