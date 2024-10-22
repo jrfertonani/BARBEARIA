@@ -40,4 +40,10 @@ search(event: Event){
     //console.log("VALUE", value);
 }
 
+
+delete(id: number){
+  this.serviceServico.delete(id).subscribe(servicos => {
+    window.location.reload();
+  })
+}
 }
