@@ -27,7 +27,7 @@
         <td>{{ barbeiro.telefone }}</td>
         <td>{{ barbeiro.especialidade }}</td>
         <td>
-          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-warning mx-2" [routerLink]="['/editarBarbeiro', barbeiro.idBarbeiro]"> Editar</button>
           <button class="btn btn-danger mx-2" (click)="delete(barbeiro.idBarbeiro)"> Excluir</button>
         </td>
       </tr>
