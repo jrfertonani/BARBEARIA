@@ -20,4 +20,9 @@ export class AgendaService {
   createAgenda(agenda: Agenda):Observable<Agenda>{
     return this.http.post<Agenda>(this.URL,agenda);
   }
+
+  delete(id:number):Observable<Agenda>{
+    return this.http.delete<Agenda>(`${this.URL}/${id}`)
+  }
+
 }
