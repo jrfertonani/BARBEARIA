@@ -27,7 +27,7 @@
         <td>{{ cliente.telefone }}</td>
         <td>{{ cliente.email }}</td>
         <td>
-          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-warning mx-2" [routerLink]="['/editarCliente', cliente.idCliente]"> Editar</button>
           <button class="btn btn-danger mx-2"> Excluir</button>
         </td>
       </tr>
