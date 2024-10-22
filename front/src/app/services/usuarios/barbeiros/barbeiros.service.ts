@@ -31,7 +31,9 @@ export class BarbeirosService {
   }
 
   editBarbeiro(barbeiro: Barbeiros):Observable<Barbeiros>{
-    return this.http.put<Barbeiros>(this.URL,barbeiro)
+    const url = `${this.URL}/${barbeiro.idBarbeiro}`
+    return this.http.put<Barbeiros>(url,barbeiro)
   }
 
 }
+

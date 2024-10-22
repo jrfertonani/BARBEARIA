@@ -39,7 +39,8 @@ export class BarbeiroEditComponent implements OnInit{
 
 
   editBerbeiro(barbeiro: Barbeiros){
-    this.serviceBarbeiro.editBarbeiro(barbeiro).subscribe(barbeiro => {
+    console.log(barbeiro)
+    this.serviceBarbeiro.editBarbeiro(barbeiro).subscribe((barbeiro) => {
       this.router.navigate(['/barbeiros'])
     })
   }
