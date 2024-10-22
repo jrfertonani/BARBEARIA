@@ -12,8 +12,12 @@ import { Clientes } from '../../../../models/usuarios/Clientes';
 })
 export class ClienteFormComponent implements OnInit{
 
-
   @Output () onSubmit = new EventEmitter<Clientes>();
+
+  @Input () dadosCliente : Clientes | null = null;
+
+  @Input () btnAcao!: string;
+  @Input () descTitulo! :string;
 
 
   constructor( private router: Router){}
@@ -22,11 +26,14 @@ export class ClienteFormComponent implements OnInit{
   clienteForm!: FormGroup;
 
   ngOnInit(): void {
+
+   // console.log(3); //mostra os dados
+
     this.clienteForm= new FormGroup({
-      id: new FormControl(0),
-      nome: new FormControl(''),
-      telefone: new FormControl(0),
-      email: new FormControl('')
+      id: new FormControl(this.dadosCliente ? this.dadosCliente.idCliente : 0),
+      nome: new FormControl(this.dadosCliente ? this.dadosCliente.nome : ''),
+      telefone: new FormControl(this.dadosCliente ? this.dadosCliente.telefone : 0),
+      email: new FormControl(this.dadosCliente ? this.dadosCliente.email : '')
     })
   }
 
@@ -39,3 +46,4 @@ export class ClienteFormComponent implements OnInit{
   }
 
 }
+
