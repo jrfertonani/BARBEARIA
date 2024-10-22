@@ -1,1 +1,3 @@
-<p>barbeiro-edit works!</p>
+<div *ngIf="barbeiro">
+  <app-barbeiro-form [dadosBarbeiro]="barbeiro" [btnAcao]="btnAcao" [descTitulo]="descTitulo" (onSubmit)="editBerbeiro($event)"></app-barbeiro-form>
+</div>
