@@ -40,5 +40,11 @@ export class AgendaListComponent implements OnInit{
     //console.log("TARGET", target);
     //console.log("VALUE", value);
   }
+
+  delete(id: number){
+    this.serviceAgenda.delete(id).subscribe(agenda =>{
+      window.location.reload();
+    })
+  }
 }
 
