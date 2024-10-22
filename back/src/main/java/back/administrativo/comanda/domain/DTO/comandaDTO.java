@@ -16,5 +16,6 @@ public class comandaDTO {
     private BigDecimal valorTotal;
     private LocalDate dataPagamento;
     private String formaPagamento;
+    private Long idAgendamento;
 
 }
