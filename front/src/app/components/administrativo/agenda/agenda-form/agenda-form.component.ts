@@ -12,6 +12,8 @@ import { Agenda } from '../../../../models/administrativoModels/Agenda';
 })
 export class AgendaFormComponent implements OnInit{
 
+  agenda: Agenda [] = [];
+
   @Output () onSubmit = new EventEmitter<Agenda>();
 
   constructor( private router: Router){}
