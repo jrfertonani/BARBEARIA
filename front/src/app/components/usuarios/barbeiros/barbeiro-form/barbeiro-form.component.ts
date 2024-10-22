@@ -26,11 +26,11 @@ export class BarbeiroFormComponent implements OnInit{
 
   ngOnInit(): void {
 
-    console.log(this.dadosBarbeiro); // checar se esta retornando
+   // console.log(this.dadosBarbeiro); // checar se esta retornando
     //console.log(3) //teste para ver qual requisição esta chegando primeiro -- NÂO ESQUECER DO *ngIf no templete html de editar
 
     this.barbeiroForm = new FormGroup({
-      id: new FormControl(this.dadosBarbeiro ? this.dadosBarbeiro.idBarbeiro : 0),
+      idBarbeiro: new FormControl(this.dadosBarbeiro ? this.dadosBarbeiro.idBarbeiro : 0),
       nome: new FormControl(this.dadosBarbeiro ? this.dadosBarbeiro.nome :''),
       telefone: new FormControl(this.dadosBarbeiro ? this.dadosBarbeiro.telefone : 0),
       especialidade: new FormControl(this.dadosBarbeiro ? this.dadosBarbeiro.especialidade :'')
