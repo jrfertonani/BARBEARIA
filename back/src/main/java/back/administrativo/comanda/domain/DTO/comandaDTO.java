@@ -18,4 +18,5 @@ public class comandaDTO {
     private String formaPagamento;
     private Long idAgendamento;
 
+
 }
