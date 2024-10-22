@@ -22,4 +22,8 @@ export class BarbeirosService {
     return this.http.post<Barbeiros>(this.URL,barbeiro);
   }
 
+  delete(id:number):Observable<Barbeiros>{
+    return this.http.delete<Barbeiros>(`${this.URL}/${id}`)
+  }
+
 }

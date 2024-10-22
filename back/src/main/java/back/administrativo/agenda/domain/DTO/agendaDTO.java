@@ -1,5 +1,6 @@
 package back.administrativo.agenda.domain.DTO;
 
+import back.administrativo.comanda.domain.entity.Comanda;
 import lombok.Data;
 
 import java.io.Serial;
@@ -15,5 +16,5 @@ public class agendaDTO {
     private Long idBarbeiro;
     private Long idServico;
     private LocalDateTime dataHora;
-
+    private Comanda comanda;
 }

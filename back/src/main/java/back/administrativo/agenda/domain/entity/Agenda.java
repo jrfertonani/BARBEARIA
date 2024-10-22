@@ -38,7 +38,7 @@ public class Agenda implements Serializable {
     private Servicos servico;
 
     // Relacionamento com Comanda (Um agendamento gera uma única comanda)
-    @OneToOne(mappedBy = "agendamento")
+    @OneToOne(mappedBy = "agenda", cascade = CascadeType.REMOVE )
     private Comanda comanda;
 
 

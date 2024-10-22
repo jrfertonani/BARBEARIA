@@ -41,5 +41,10 @@ export class ClienteListComponent implements OnInit{
     //console.log("VALUE", value);
   }
 
+  delete(id: number){
+    this.serviceClientes.delete(id).subscribe(clientes => {
+      window.location.reload();
+    })
+  }
 
 }

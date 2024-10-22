@@ -28,7 +28,7 @@ public class Comanda implements Serializable {
    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "id_agendamento")
-    private Agenda agendamento;
+    private Agenda agenda;
 
 
 }

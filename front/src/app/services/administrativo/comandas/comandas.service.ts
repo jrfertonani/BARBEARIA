@@ -20,4 +20,9 @@ export class ComandasService {
     return this.http.post<Comanda>(this.URL,comanda);
   }
 
+
+  delete(id: number):Observable<Comanda>{
+    return this.http.delete<Comanda>(`${this.URL}/${id}`);
+  }
+
 }

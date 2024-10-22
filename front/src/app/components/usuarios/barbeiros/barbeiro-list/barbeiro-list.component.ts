@@ -40,4 +40,11 @@ export class BarbeiroListComponent implements OnInit{
     //console.log("VALUE", value);
   }
 
+
+  delete(id: number ){
+    this.serviceBarbeiro.delete(id).subscribe(barbeiros =>{
+      window.location.reload();
+    })
+  }
+
 }
