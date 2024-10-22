@@ -26,4 +26,10 @@ export class ClientesService {
     return this.http.post<Clientes>(this.URL, cliente)
   };
 
+
+  editCliente(cliente: Clientes):Observable<Clientes>{
+    return this.http.put<Clientes>(this.URL,cliente);
+  }
+
+
 }
