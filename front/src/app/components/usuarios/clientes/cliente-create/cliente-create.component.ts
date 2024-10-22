@@ -15,6 +15,9 @@ export class ClienteCreateComponent {
 
   constructor(private serviceCliente: ClientesService, private router: Router){}
 
+  btnAcao = "Cadastrar";
+  descTitulo = "Cadastrar Clientes"
+
   createCliente(clientes : Clientes){
     this.serviceCliente.createCliente(clientes).subscribe(cliente => {
       this.router.navigate(['/clientes']);
