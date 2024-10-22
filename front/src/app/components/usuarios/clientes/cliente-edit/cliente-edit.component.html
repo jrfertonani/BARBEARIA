@@ -1,1 +1,4 @@
-<p>cliente-edit works!</p>
+<div *ngIf="clientes">
+  <app-cliente-form [dadosCliente]="clientes" [btnAcao]="btnAcao" [descTitulo]="descTitulo" (onSubmit)="editCliente($event)"></app-cliente-form>
+</div>
+
