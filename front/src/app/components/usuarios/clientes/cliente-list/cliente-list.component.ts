@@ -28,6 +28,7 @@ export class ClienteListComponent implements OnInit{
 
   }
 
+
   search(event:Event){
     const target = event.target as HTMLInputElement;
     const value = target.value.toLowerCase();
