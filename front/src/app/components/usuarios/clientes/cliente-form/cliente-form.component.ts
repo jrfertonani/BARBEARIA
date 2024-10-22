@@ -30,7 +30,7 @@ export class ClienteFormComponent implements OnInit{
    // console.log(3); //mostra os dados
 
     this.clienteForm= new FormGroup({
-      id: new FormControl(this.dadosCliente ? this.dadosCliente.idCliente : 0),
+      idCliente: new FormControl(this.dadosCliente ? this.dadosCliente.idCliente : 0),
       nome: new FormControl(this.dadosCliente ? this.dadosCliente.nome : ''),
       telefone: new FormControl(this.dadosCliente ? this.dadosCliente.telefone : 0),
       email: new FormControl(this.dadosCliente ? this.dadosCliente.email : '')
