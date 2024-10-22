@@ -40,5 +40,11 @@ export class ComandaListComponent implements OnInit{
  // console.log("VALUE", value);
   }
 
+  delete(id: number){
+    this.serviceComandas.delete(id).subscribe(comandas => {
+      window.location.reload();
+    })
+  }
+
 }
 
