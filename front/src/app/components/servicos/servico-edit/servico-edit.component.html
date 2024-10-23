@@ -1,1 +1,3 @@
-<p>servico-edit works!</p>
+<div *ngIf="servico">
+  <app-servico-form [dadosServico]="servico" [btnAcao]="btnAcao" [descTitulo]="descTitulo" (onSubmit)="editServico($event)"></app-servico-form>
+</div>
