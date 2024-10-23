@@ -1,1 +1,3 @@
-<p>comanda-edit works!</p>
+<div *ngIf="comanda">
+  <app-comanda-form [dadosComanda]="comanda" [btnAcao]="btnAcao" [descTitulo]="descTitulo" (onSubmit)="editComanda($event)"></app-comanda-form>
+</div>
