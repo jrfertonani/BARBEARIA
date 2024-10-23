@@ -1,1 +1,4 @@
-<p>agenda-edit works!</p>
+<div *ngIf="agenda">
+  <app-agenda-form [dadosAgenda]="agenda" [btnAcao]="btnAcao" [descTitulo]="descTitulo" (onSubmit)="editAgenda($event)"></app-agenda-form>
+</div>
+
