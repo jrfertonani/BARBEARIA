@@ -13,6 +13,9 @@ import { Comanda } from '../../../../models/administrativoModels/Comanda';
 })
 export class ComandaCreateComponent {
 
+  btnAcao = "Cadastrar";
+  descTitulo = "Cadastrar comanda";
+
   constructor(private serviceComandas: ComandasService, private router: Router){}
 
 
