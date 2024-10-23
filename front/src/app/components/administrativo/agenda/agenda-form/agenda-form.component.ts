@@ -12,9 +12,14 @@ import { Agenda } from '../../../../models/administrativoModels/Agenda';
 })
 export class AgendaFormComponent implements OnInit{
 
-  agenda: Agenda [] = [];
-
   @Output () onSubmit = new EventEmitter<Agenda>();
+
+  @Input() dadosAgenda : Agenda | null = null;
+
+  @Input() btnAcao!: string;
+  @Input() descTitulo!: string;
+
+
 
   constructor( private router: Router){}
 
@@ -22,11 +27,12 @@ export class AgendaFormComponent implements OnInit{
 
   ngOnInit(): void {
     this.agendaForm = new FormGroup({
-      id: new FormControl(0),
-      dataHora: new FormControl(0),
-      cliente: new FormControl(''),
-      barbeiro: new FormControl(''),
-      servico: new FormControl('')
+      idAgendamento: new FormControl(this.dadosAgenda ? this.dadosAgenda.idAgendamento : 0),
+      dataHora: new FormControl(this.dadosAgenda ? this.dadosAgenda.dataHora : 0),
+      cliente: new FormControl(this.dadosAgenda ? this.dadosAgenda.cliente.idCliente : 0),
+      barbeiro: new FormControl(this.dadosAgenda ? this.dadosAgenda.barbeiro.idBarbeiro : 0),
+      servico: new FormControl(this.dadosAgenda ? this.dadosAgenda.servico.idServico : 0)
+     // comanda: new FormControl(this.dadosAgenda ? this.dadosAgenda.comanda.idComanda : 0)
     })
 
   }
