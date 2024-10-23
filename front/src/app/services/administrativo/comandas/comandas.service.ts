@@ -24,6 +24,11 @@ export class ComandasService {
     return this.http.get<Comanda>(`${this.URL}/${id}`)
   }
 
+  editComanda(comanda: Comanda):Observable<Comanda>{
+    const url = `${this.URL}/${comanda.idComanda}`
+    return this.http.put<Comanda>(url,comanda);
+  }
+
 
   delete(id: number):Observable<Comanda>{
     return this.http.delete<Comanda>(`${this.URL}/${id}`);
