@@ -26,14 +26,13 @@ export class ServicosService {
     return this.http.get<Servicos>(`${this.URL}/${id}`)
   }
 
-  delete(id: number):Observable<Servicos>{
-    return this.http.delete<Servicos>(`${this.URL}/${id}`);
-  }
-
   editServico(servico: Servicos):Observable<Servicos>{
     const url = `${this.URL}/${servico.idServico}`
     return this.http.put<Servicos>(url,servico);
   }
 
+  delete(id: number):Observable<Servicos>{
+    return this.http.delete<Servicos>(`${this.URL}/${id}`);
+  }
 
 }
