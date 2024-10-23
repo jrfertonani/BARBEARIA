@@ -27,7 +27,7 @@
         <td>{{ servico.preco }}</td>
         <td>{{ servico.descricao }}</td>
         <td>
-          <button class="btn btn-warning mx-2"> Editar</button>
+          <button class="btn btn-warning mx-2"[routerLink]="['/editarServico',servico.idServico]"> Editar</button>
           <button class="btn btn-danger mx-2" (click)="delete(servico.idServico)"> Excluir</button>
         </td>
       </tr>
