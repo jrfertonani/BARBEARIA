@@ -16,9 +16,12 @@ export class AgendaCreateComponent {
 
   constructor(private serviceAgenda: AgendaService, private router: Router){}
 
-
+  btnAcao = "Cadastrar";
+  descTitulo = "Agendar"
+;
   createAgenda(agenda: Agenda){
-    this.serviceAgenda.createAgenda(agenda).subscribe(agenda => {
+    this.serviceAgenda.createAgenda(agenda).subscribe((agenda) => {
+      console.log(agenda)
       this.router.navigate(['/agenda'])
       console.log(agenda)
     })
