@@ -13,12 +13,21 @@ export class AgendaService {
   constructor(private http: HttpClient) {}
 
 
+  createAgenda(agenda: Agenda):Observable<Agenda>{
+    return this.http.post<Agenda>(this.URL,agenda);
+  }
+
   List():Observable<Agenda[]>{
     return this.http.get<Agenda[]>(this.URL);
   }
 
-  createAgenda(agenda: Agenda):Observable<Agenda>{
-    return this.http.post<Agenda>(this.URL,agenda);
+  findById(id: number):Observable<Agenda>{
+    return this.http.get<Agenda>(`${this.URL}/${id}`)
+  }
+
+  editAgenda(agenda : Agenda):Observable<Agenda>{
+     const url = `${this.URL}/${agenda.idAgendamento}`
+    return this.http.put<Agenda>(url,agenda);
   }
 
   delete(id:number):Observable<Agenda>{
