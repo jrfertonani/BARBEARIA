@@ -15,19 +15,22 @@ export class ComandaFormComponent implements OnInit{
 
   @Output () onSubmit = new EventEmitter<Comanda>();
 
-  comandaForm!: FormGroup;
+  @Input() dadosComanda : Comanda | null = null;
 
+  @Input() btnAcao!: string;
+  @Input() descTitulo!: string;
 
   constructor( private router: Router){}
 
+  comandaForm!: FormGroup;
 
   ngOnInit(): void {
     this.comandaForm = new FormGroup({
-      id: new FormControl(0),
-      valorTotal: new FormControl(0),
-      dataPagamento: new FormControl(''),
-      formaPagamento: new FormControl(''),
-      agendamento: new FormControl('')
+      idComanda: new FormControl(this.dadosComanda ? this.dadosComanda.idComanda : 0),
+      valorTotal: new FormControl(this.dadosComanda ? this.dadosComanda.valorTotal : 0),
+      dataPagamento: new FormControl(this.dadosComanda ? this.dadosComanda.dataPagamento : 0),
+      formaPagamento: new FormControl(this.dadosComanda ? this.dadosComanda.formaPagamento : ''),
+      agendamento: new FormControl(this.dadosComanda ? this.dadosComanda.agenda : '')
     })
   }
 
