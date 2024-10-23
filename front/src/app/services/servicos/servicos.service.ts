@@ -14,15 +14,26 @@ export class ServicosService {
   constructor(private http: HttpClient) {}
 
 
+  createSErvico(servico: Servicos):Observable<Servicos>{
+    return this.http.post<Servicos>(this.URL,servico);
+  }
+
   List():Observable<Servicos[]>{
     return this.http.get<Servicos[]>(this.URL);
   }
 
-  createSErvico(servico: Servicos):Observable<Servicos>{
-    return this.http.post<Servicos>(this.URL,servico);
+  findById(id:number):Observable<Servicos>{
+    return this.http.get<Servicos>(`${this.URL}/${id}`)
   }
 
   delete(id: number):Observable<Servicos>{
     return this.http.delete<Servicos>(`${this.URL}/${id}`);
   }
+
+  editServico(servico: Servicos):Observable<Servicos>{
+    const url = `${this.URL}/${servico.idServico}`
+    return this.http.put<Servicos>(url,servico);
+  }
+
+
 }
