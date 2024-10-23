@@ -12,12 +12,16 @@ export class ComandasService {
 
   constructor(private http: HttpClient) {}
 
+  createComandas(comanda : Comanda):Observable<Comanda>{
+    return this.http.post<Comanda>(this.URL,comanda);
+  }
+
   List():Observable<Comanda[]>{
     return this.http.get<Comanda[]>(this.URL);
   }
 
-  createComandas(comanda : Comanda):Observable<Comanda>{
-    return this.http.post<Comanda>(this.URL,comanda);
+  findById(id: number):Observable<Comanda>{
+    return this.http.get<Comanda>(`${this.URL}/${id}`)
   }
 
 
