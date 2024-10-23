@@ -43,7 +43,7 @@ export class ServicoEditComponent implements OnInit {
     //console.log(servico)
     this.serviceServico.editServico(servico).subscribe((servico) => {
       console.log(servico)
-    //  this.router.navigate(['/servicos']);
+      this.router.navigate(['/servicos']);
   })
   }
 
