@@ -6,7 +6,7 @@ export interface Comanda {
   valorTotal: number;
   dataPagamento: Date;
   formaPagamento: string;
-  agenda: Agenda;
+  agendamento: Agenda;
 }
 
 
