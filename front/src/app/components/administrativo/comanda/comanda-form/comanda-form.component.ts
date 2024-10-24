@@ -30,7 +30,7 @@ export class ComandaFormComponent implements OnInit{
       valorTotal: new FormControl(this.dadosComanda ? this.dadosComanda.valorTotal : 0),
       dataPagamento: new FormControl(this.dadosComanda ? this.dadosComanda.dataPagamento : 0),
       formaPagamento: new FormControl(this.dadosComanda ? this.dadosComanda.formaPagamento : ''),
-      agendamento: new FormControl(this.dadosComanda ? this.dadosComanda.agenda : '')
+      agendamento: new FormControl(this.dadosComanda ? this.dadosComanda.agendamento.idAgendamento : 0)
     })
   }
 
