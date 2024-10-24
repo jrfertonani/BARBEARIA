@@ -25,7 +25,7 @@ Para rodar o Back, se tiver o java instalado basta somente rodar o projeto. IDE(
 
 Para rodar o Front, se tiver instalado o @angular-cli basta digitar no console: ng s IDE( VsCode );
 
-Para acessar o Swagger basta acessaria em: http://localhost:8080/swagger-ui.html  ;
+Para acessar o Swagger basta estar com o Back rodando e clicar em: http://localhost:8080/swagger-ui.html  ;
 
 
 
