@@ -23,6 +23,7 @@ associando clientes, serviços, e pagamentos.
 
 Para rodar o Back, se tiver o java instalado basta somente rodar o projeto. IDE( Intelij )
 Para rodar o Front, se tiver instalado o @angular-cli basta digitar no console: ng s IDE( VsCode )
+Para acessar o Swagger basta acessaria em: http://localhost:8080/swagger-ui.html
 
 
 ![BARBEARIA (1)](https://github.com/user-attachments/assets/f1f4cf20-69ca-476c-afd0-78c0441a0ab2)
