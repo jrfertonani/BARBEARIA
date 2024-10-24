@@ -16,5 +16,5 @@ public class agendaDTO {
     private Long idBarbeiro;
     private Long idServico;
     private LocalDateTime dataHora;
-    private Comanda comanda;
+    private Long idComanda;
 }
