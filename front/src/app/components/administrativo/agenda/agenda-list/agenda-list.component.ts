@@ -46,5 +46,8 @@ export class AgendaListComponent implements OnInit{
       window.location.reload();
     })
   }
+
+
+
 }
 
