@@ -31,8 +31,8 @@ export class AgendaFormComponent implements OnInit{
       dataHora: new FormControl(this.dadosAgenda ? this.dadosAgenda.dataHora : 0),
       cliente: new FormControl(this.dadosAgenda ? this.dadosAgenda.cliente.idCliente : 0),
       barbeiro: new FormControl(this.dadosAgenda ? this.dadosAgenda.barbeiro.idBarbeiro : 0),
-      servico: new FormControl(this.dadosAgenda ? this.dadosAgenda.servico.idServico : 0)
-     // comanda: new FormControl(this.dadosAgenda ? this.dadosAgenda.comanda.idComanda : 0)
+      servico: new FormControl(this.dadosAgenda ? this.dadosAgenda.servico.idServico : 0),
+      comanda: new FormControl(this.dadosAgenda ? this.dadosAgenda.comanda.idComanda: 0)
     })
 
   }
