@@ -28,7 +28,7 @@
         <td>{{ agendamento.cliente.nome }}</td>
         <td>{{ agendamento.barbeiro.nome }}</td>
         <td>{{ agendamento.servico.nomeServico }}</td>
-        <td>{{ agendamento.comanda.idComanda}}</td>
+        <td>{{ agendamento.comanda }}</td>
         <td>
           <button class="btn btn-warning mx-2" [routerLink]="['/editarAgenda',agendamento.idAgendamento]"> Editar</button>
           <button class="btn btn-danger mx-2" (click)="delete(agendamento.idAgendamento)"> Excluir</button>
@@ -44,5 +44,8 @@
   }
 </tbody>
 </table>
+
+
+
 
 </div>
