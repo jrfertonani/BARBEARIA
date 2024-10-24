@@ -3,13 +3,21 @@ Simulador de barbearia:
 Para este projeto foram utilizadas: JAVA-SpringBoot - Angular - MySql
 
 Diagrama Relacional:
+
 Clientes --- 1
+
 --- Agenda
+
 Barbeiros --- 1
+
 --- Agenda
+
 Serviços --- 1
+
 --- Agenda
+
 Agenda --- 1:1 --- Comandas
+
 Esse esquema permite registrar todos os atendimentos da barbearia de forma organizada,
 associando clientes, serviços, e pagamentos.
 
