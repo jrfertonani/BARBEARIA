@@ -21,4 +21,8 @@ public class barbeiroDTO {
     private String especialidade;
     private String telefone;
 
+
+
 }
+
+
