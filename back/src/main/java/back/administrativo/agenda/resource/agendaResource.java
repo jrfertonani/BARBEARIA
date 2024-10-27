@@ -4,13 +4,13 @@ package back.administrativo.agenda.resource;
 import back.administrativo.agenda.domain.DTO.agendaDTO;
 import back.administrativo.agenda.domain.entity.Agenda;
 import back.administrativo.agenda.service.agendaService;
-import back.administrativo.comanda.domain.DTO.comandaDTO;
-import back.administrativo.comanda.domain.entity.Comanda;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @CrossOrigin("*")
@@ -24,6 +24,20 @@ public class agendaResource {
 
     @Autowired
     public agendaService service;
+
+
+    @PostMapping
+    public ResponseEntity<agendaDTO> create(@RequestBody agendaDTO DTO){
+        URI uri = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(
+                        service.create(DTO)
+                ).toUri();
+        return ResponseEntity.created(uri).body(DTO);
+    }
+
+
 
 
     @GetMapping
