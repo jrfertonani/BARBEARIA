@@ -30,11 +30,11 @@ public class barbeiroService {
         return repository.findAll();
     }
 
-    public barbeiroDTO findById(Long id) {
+    public Barbeiros findById(Long id) {
         return mapper.map(
                 repository.findById(id).orElseThrow(
                         () -> new ObjectNotFoundException("Serviço não encontrado! ID: " +id)
-                ), barbeiroDTO.class);
+                ), Barbeiros.class);
     }
 
     public Barbeiros update(Long id, barbeiroDTO DTO) {
