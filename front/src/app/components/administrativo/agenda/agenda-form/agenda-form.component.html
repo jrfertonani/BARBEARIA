@@ -4,22 +4,22 @@
 
     <div class="mt-03">
       <label class="fom-label">Data Hora</label>
-      <input type="datetime-local" placeholder="Insira o Data Hora" class="form-control" formControlName="dataHora" />
+      <input type="datetime" placeholder="Insira o Data Hora" class="form-control" formControlName="dataHora" />
     </div>
 
     <div class="mt-03">
       <label class="fom-label">Cliente</label>
-      <input type="text" placeholder="Insira o Cliente" class="form-control" formControlName="cliente" />
+      <input type="text" id="idCliente" placeholder="Insira o Cliente" class="form-control" formControlName="idCliente" />
     </div>
 
     <div class="mt-03">
       <label class="fom-label">Barbeiro</label>
-      <input type="text" placeholder="Insira o Barbeiro" class="form-control" formControlName="barbeiro" />
+      <input type="text" id="idBarbeiro" placeholder="Insira o Barbeiro" class="form-control" formControlName="idBarbeiro" />
     </div>
 
     <div class="mt-03">
       <label class="fom-label">Servico</label>
-      <input type="text" placeholder="Insira o Servico" class="form-control" formControlName="servico" />
+      <input type="text" id="idServico" placeholder="Insira o Servico" class="form-control" formControlName="idServico" />
     </div>
 
     <div class="mt-03">
@@ -28,7 +28,7 @@
     </div>
 
     <div class="d-flex mt-3">
-      <button class="btn btn-success w-50 mx-1" type="submit">{{btnAcao}}</button>
+      <button class="btn btn-success w-50 mx-1" type="submit">{{ btnAcao }}</button>
       <a class="btn btn-info w-50" [routerLink]="['/agenda']">Voltar</a>
     </div>
 
