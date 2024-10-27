@@ -1,8 +1,6 @@
 package back.usuarios.clientes.service;
 
 import back._config.Exeptions.serviceExceptions.ObjectNotFoundException;
-import back.usuarios.barbeiros.domain.DTO.barbeiroDTO;
-import back.usuarios.barbeiros.domain.entity.Barbeiros;
 import back.usuarios.clientes.domain.DTO.clienteDTO;
 import back.usuarios.clientes.domain.entity.Clientes;
 import back.usuarios.clientes.repository.clienteRepository;
@@ -31,11 +29,11 @@ public class clienteService {
         return repository.findAll();
     }
 
-    public clienteDTO findById(Long id) {
+    public Clientes findById(Long id) {
         return mapper.map(
                 repository.findById(id).orElseThrow(
                         () -> new ObjectNotFoundException("Cliente não encontrado! ID: " +id)
-                ), clienteDTO.class);
+                ), Clientes.class);
     }
 
     public Clientes update(Long id, clienteDTO DTO) {
