@@ -8,7 +8,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -32,11 +31,11 @@ public class servicoService {
         return repository.findAll();
     }
 
-    public servicoDTO findById(Long id) {
+    public Servicos findById(Long id) {
         return mapper.map(
                 repository.findById(id).orElseThrow(
                         () -> new ObjectNotFoundException("Serviço não encontrado! ID: " +id)
-                ), servicoDTO.class);
+                ), Servicos.class);
     }
 
     public Servicos update(Long id, servicoDTO DTO) {
