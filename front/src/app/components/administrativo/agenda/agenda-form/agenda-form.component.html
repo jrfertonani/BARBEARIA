@@ -1,10 +1,12 @@
+
+
 <div class="container mt-5">
   <h1> {{descTitulo}}</h1>
   <form [formGroup]="agendaForm" (ngSubmit)="submit()" #formDir="ngForm">
 
     <div class="mt-03">
       <label class="fom-label">Data Hora</label>
-      <input type="datetime" placeholder="Insira o Data Hora" class="form-control" formControlName="dataHora" />
+      <input type="datetime" placeholder="00/00/0000 00:00" class="form-control" formControlName="dataHora" />
     </div>
 
     <div class="mt-03">
