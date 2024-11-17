@@ -28,7 +28,7 @@ export class AgendaFormComponent implements OnInit{
   ngOnInit(): void {
     this.agendaForm = new FormGroup({
       idAgendamento: new FormControl(this.dadosAgenda ? this.dadosAgenda.idAgendamento : 0),
-      dataHora: new FormControl(this.dadosAgenda ? this.dadosAgenda.dataHora : 0),
+      dataHora: new FormControl(this.dadosAgenda ? this.dadosAgenda.dataHora : ''),
       idCliente: new FormControl(this.dadosAgenda ? this.dadosAgenda.cliente.idCliente : 0),
       idBarbeiro: new FormControl(this.dadosAgenda ? this.dadosAgenda.barbeiro.idBarbeiro : 0),
       idServico: new FormControl(this.dadosAgenda ? this.dadosAgenda.servico.idServico : 0),
